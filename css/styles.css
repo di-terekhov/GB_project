@@ -81,7 +81,9 @@ header img {
     clear: both;
 }
 
-.about_title {}
+.about_title {
+    margin: 0;
+}
 
 .about_prodct_wrp p {
     font-size: 16px;
@@ -178,9 +180,23 @@ summary:focus {
     clear: both;
 }
 
+.screenshot_block_content {
+    min-height: 150px;
+    margin: 0 0 30px 0;
+}
+
+.screenshot_col_1>div:nth-child(2),
+.screenshot_col_2>div:nth-child(2) {
+    margin: 0;
+}
+
 .screenshot_col_1 {
     float: left;
     width: 50%;
+}
+
+.screenshot_col_1>.screenshot_block_content {
+    margin-right: 10px;
 }
 
 .screenshot_col_2 {
@@ -197,18 +213,19 @@ summary:focus {
     font-weight: 400;
     font-size: 24px;
     color: #445161;
-    margin: 0;
+    margin: 0 0 15px 0;
     float: left;
 
 }
 
 .screenshot_description {
     font-size: 16px;
-    line-height: 24px;
+    /* line-height: 24px; */
     color: #333333;
     display: inline-block;
-    width: 359px;
-    margin: 10px 0 0 0;
+    width: 350px;
+    margin: 0 0 0 0;
+    text-align: justify;
 }
 
 .screenshot_img {
@@ -219,9 +236,11 @@ summary:focus {
     float: left;
 }
 
-.screenshot_col_1>p:nth-child(3),
-.screenshot_col_2>p:nth-child(3) {
-    margin-bottom: 30px;
+.screenshot_img:after {
+    content: "";
+    display: block;
+    width: 100%;
+    clear: both;
 }
 
 .reviews_wrp {
@@ -376,10 +395,185 @@ summary:focus {
     color: #445161;
     background-color: #fff;
     border-radius: 5px;
+    text-transform: uppercase;
 }
+
 .offer_buy_btn:hover {
     background-color: #EBEBEB;
 }
+
 .offer_buy_btn:active {
     background-color: #fff;
+}
+
+footer {
+    background-color: #445162;
+    box-sizing: border-box;
+}
+
+footer:after {
+    content: "";
+    display: block;
+    width: 100%;
+    clear: both;
+}
+
+.footer_title {
+    padding: 50px 0 20px 0;
+    text-align: center;
+    color: #fff;
+}
+
+.footer_input_design {
+    width: 100%;
+    font-size: 16px;
+    font-weight: 400;
+    color: #445162;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 11px 10px;
+    box-sizing: border-box;
+    border-width: 0px;
+    outline: none;
+}
+
+.footer_form {
+    float: left;
+    width: 500px;
+    margin: 0 0 0 250px;
+    text-align: center;
+}
+
+.footer_contacts_wrp {
+    text-align: center;
+}
+
+.footer_form_name {
+    text-transform: capitalize;
+}
+
+.footer_form_email {}
+
+.footer_form_text {
+    resize: none;
+    padding-bottom: 123px;
+}
+
+.footer_submit_btn {
+    margin: 10px auto 50px auto;
+    padding: 14px 48px;
+    display: block;
+    text-align: center;
+    font-size: 18px;
+    line-height: 18px;
+    font-weight: 700;
+    color: #445161;
+    background-color: #fff;
+    border-radius: 5px;
+    outline: none;
+}
+
+.footer_submit_btn:hover {
+    background-color: #EBEBEB;
+}
+
+.footer_submit_btn:active {
+    background-color: #fff;
+}
+
+.footer_contacts {
+    display: inline-block;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    color: #ffffff;
+    text-align: left;
+}
+
+.footer_contacts ul {
+    list-style-type: none;
+    padding: 0;
+    position: relative;
+}
+
+.footer_contacts a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.footer_contacts li {
+    margin: 15px 0;
+}
+
+.footer_contacts li:before {
+    margin: 0 10px;
+    position: absolute;
+    left: -42px;
+}
+
+.footer_contacts li:nth-child(1)::before {
+    content: " ";
+    background-image: url(../img/skype_icon_319.png);
+    background-repeat: no-repeat, repeat;
+    display: inline-block;
+    width: 24px;
+    height: 26px;
+}
+
+.footer_contacts li:nth-child(2)::before {
+    content: " ";
+    background-image: url(../img/icq_icon_324.png);
+    background-repeat: no-repeat, repeat;
+    display: inline-block;
+    width: 26px;
+    height: 26px;
+}
+
+.footer_contacts li:nth-child(3)::before {
+    content: " ";
+    background-image: url(../img/email_icon_332.png);
+    background-repeat: no-repeat, repeat;
+    display: inline-block;
+    height: 22px;
+    width: 22px;
+}
+
+.footer_contacts li:nth-child(4)::before {
+    content: " ";
+    background-image: url(../img/phone_icon_337.png);
+    background-repeat: no-repeat, repeat;
+    display: inline-block;
+    height: 24px;
+    width: 23px;
+}
+
+.social_icons a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.social_icons a:hover {
+    color: #EBEBEB
+}
+
+.social_icons {
+    margin: 50px 0 0 -35px;
+    text-decoration: none;
+    font-family: 'Socialico';
+    font-size: 60px;
+    line-height: 24px;
+    font-weight: 400;
+    letter-spacing: 0.025em;
+    color: #ffffff;
+}
+
+.footer_company_info {
+    display: block;
+    text-align: center;
+    font-size: 12px;
+    line-height: 24px;
+    font-weight: 400;
+    letter-spacing: 0.025em;
+    color: #445162;
+    background-color: #ebebeb;
 }
